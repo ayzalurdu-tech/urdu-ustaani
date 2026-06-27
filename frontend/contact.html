@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Learn Urdu Online</title>
+  <meta name="description" content="Get in touch to ask questions before booking your Urdu lesson." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo"><span class="urdu-mark">اردو</span> With Urdu Ustaani </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html">Book Trial</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h1>Get in touch</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+
+      <!-- ===== CONTACT FORM ===== -->
+      <div>
+        <h2 class="section-title">Send a message</h2>
+        <div class="form-card" style="margin:0;">
+
+          <div class="success-box" id="contact-success">
+            ✅ Thanks for reaching out! I'll reply within 24 hours.
+          </div>
+
+          <form id="contact-form" novalidate>
+            <div class="form-group" data-field="name">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required />
+              <span class="error-text"></span>
+            </div>
+            <div class="form-group" data-field="email">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+              <span class="error-text"></span>
+            </div>
+            <div class="form-group" data-field="message">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="error-text"></span>
+            </div>
+            <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- ===== DIRECT CONTACT INFO ===== -->
+      <div>
+        <h2 class="section-title">Other ways to reach me</h2>
+
+        <div class="contact-info-card">
+          <h3>💬 WhatsApp</h3>
+          <p>Fastest way to reach me directly.</p>
+          <a href="#" class="btn btn-whatsapp" id="contact-whatsapp-link">Message on WhatsApp</a>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>✉️ Email</h3>
+          <p><a href="mailto:[email protected]">ayzalurdu@gmail.com</a></p>
+        </div>
+
+        <div class="contact-info-card">
+          <h3>🕐 Response time</h3>
+          <p>I usually reply within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Frequently asked questions</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>How quickly will I hear back?</summary>
+          <p>Usually within 24 hours, often sooner via WhatsApp.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I ask questions before booking a trial?</summary>
+          <p>Of course! Message me on WhatsApp or use the form above — happy to answer anything first.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you teach children?</summary>
+          <p>Yes, I teach students of all ages — just mention your child's age when booking.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4><span class="urdu-mark">اردو</span> With Urdu Ustaani</h4>
+        <p>Helping international students speak, read and write Urdu with confidence — one lesson at a time.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="lessons.html">Lessons</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="booking.html">Book a Lesson</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:[email protected]">ayzalurdu@gmail.com</a>
+        <a href="contact.html">Contact Page</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">&copy; 2026 اردو With Urdu Ustaani. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,231 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Lesson | Learn Urdu Online</title>
+  <meta name="description" content="Book your trial or regular Urdu lesson. Choose a time and pay securely online." />
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+  <!-- Calendly widget script (needed for embedded calendar) -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+ </head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo"><span class="urdu-mark">اردو</span>With Urdu Ustaani</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="booking.html">Book Trial</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-banner">
+    <div class="container">
+      <p class="eyebrow">Booking</p>
+      <h1>Book your lesson</h1>
+    </div>
+  </section>
+
+  <!-- ===== STEP 1: BOOKING FORM ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Step 1: Tell me about you</h2>
+      <p class="section-subtitle">Fill out this form first — I'll use it to prepare for your lesson.</p>
+
+      <div class="form-card">
+
+        <!-- Success message shown after the form submits successfully -->
+        <div class="success-box" id="booking-success">
+          ✅ Thank you! Your booking request has been received. Check your email
+          for confirmation, and please pick a time slot in Step 2 below.
+        </div>
+
+        <form id="booking-form" novalidate>
+
+          <div class="form-group" data-field="fullName">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" data-field="email">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+              <span class="error-text"></span>
+            </div>
+            <div class="form-group" data-field="whatsapp">
+              <label for="whatsapp">WhatsApp Number *</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 555 123 4567" required />
+              <span class="error-text"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" data-field="country">
+              <label for="country">Country *</label>
+              <input type="text" id="country" name="country" required />
+              <span class="error-text"></span>
+            </div>
+            <div class="form-group" data-field="timezone">
+              <label for="timezone">Time Zone *</label>
+              <input type="text" id="timezone" name="timezone" placeholder="e.g. GMT+5" required />
+              <span class="error-text"></span>
+            </div>
+          </div>
+
+          <div class="form-group" data-field="age">
+            <label for="age">Age *</label>
+            <input type="number" id="age" name="age" min="5" max="100" required />
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-group" data-field="urduLevel">
+            <label for="urduLevel">Current Urdu Level *</label>
+            <select id="urduLevel" name="urduLevel" required>
+              <option value="">Select your level</option>
+              <option value="Complete Beginner">Complete Beginner</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-group" data-field="learningPurpose">
+            <label for="learningPurpose">Purpose of Learning Urdu *</label>
+            <select id="learningPurpose" name="learningPurpose" required>
+              <option value="">Select a purpose</option>
+              <option value="Family">Family</option>
+              <option value="Travel">Travel</option>
+              <option value="Work">Work</option>
+              <option value="Reading">Reading</option>
+              <option value="Speaking">Speaking</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="error-text"></span>
+          </div>
+
+          <!-- What are you booking? -->
+          <div class="form-group" data-field="bookingType">
+            <label>What would you like to book? *</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="bookingType" value="25 Minutes" required />
+                25 Minute Trial Lesson — $9
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="bookingType" value="5 Lessons" />
+                5 Lesson Package — $85
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="bookingType" value="10 Lessons" />
+                10 Lesson Package — $150
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="bookingType" value="20 Lessons" />
+                20 Lesson Package — $300
+              </label>
+            </div>
+            <span class="error-text"></span>
+          </div>
+
+          <div class="form-group" data-field="priceAgreement">
+            <div class="checkbox-option">
+              <input type="checkbox" id="priceAgreement" name="priceAgreement" required />
+              <label for="priceAgreement" style="margin:0; font-weight:400;">
+                I understand that regular lessons cost $20. *
+              </label>
+            </div>
+            <span class="error-text"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit-btn">Submit Booking Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STEP 2: CALENDLY ===== -->
+  <section class="section section-alt">
+    <div class="container calendly-section">
+      <h2 class="section-title">Step 2: Pick a time</h2>
+      <p class="section-subtitle">
+        Choose a time that works for you — Calendly automatically converts it to your time zone
+        and sends you a reminder.
+      </p>
+      <!-- Calendly widget: replace data-url with your own link -->
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/ayzalurdu/30min"
+           style="min-width:280px;height:650px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STEP 3: PAYMENT ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Step 3: Payment</h2>
+      <p class="section-subtitle">
+        Pay securely online for lesson packages. Trial lessons can be paid after the lesson if preferred.
+      </p>
+      <!-- Replace href="#" with your actual payment links -->
+      <div class="grid-3">
+        <div class="price-card">
+          <h3>Single Lesson</h3>
+          <p class="price">$20</p>
+          <a href="#" class="btn btn-primary" target="_blank" rel="noopener">Pay Now</a>
+        </div>
+        <div class="price-card featured">
+          <h3>5 Lessons</h3>
+          <p class="price">$95</p>
+          <a href="#" class="btn btn-primary" target="_blank" rel="noopener">Pay Now</a>
+        </div>
+        <div class="price-card">
+          <h3>10 Lessons</h3>
+          <p class="price">$180</p>
+          <a href="#" class="btn btn-primary" target="_blank" rel="noopener">Pay Now</a>
+        </div>
+      </div>
+      <p class="price-note">Need the 20-lesson package? Message me on WhatsApp and I'll send the link.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4><span class="urdu-mark">اردو</span> With Urdu Ustaani</h4>
+        <p>Helping international students speak, read and write Urdu with confidence — one lesson at a time.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="lessons.html">Lessons</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="booking.html">Book a Lesson</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <!-- FIX 1: placeholder email replaced with a working mailto link -->
+        <a href="mailto:urdu@learnurdu.com">urdu@learnurdu.com</a>
+        <a href="contact.html">Contact Page</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">&copy; 2026 اردو With Urdu Ustaani. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
