@@ -13,7 +13,7 @@ const WHATSAPP_NUMBER = "923156073848";
 const WHATSAPP_MESSAGE = "Hello, I would like to learn Urdu and book a trial lesson.";
 
 // Your backend URL — change this when you deploy on Render
-const BACKEND_URL = "https://urdu-ustaani-backend.onrender.com";
+const BACKEND_URL = "https://urdu-ustaani.onrender.com";
 
 // Lemon Squeezy checkout links
 const LEMON_SQUEEZY_LINKS = {
